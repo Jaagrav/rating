@@ -1,190 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="theme-color" content="black"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta name="theme-color" content="black" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>movie</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="rating">Rated: R</div>
     <div class="d">
-        
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTvGNXRmC76GfZrgM7P_oY0nZqg00bsjC7E5zu4dZBReXiHD_kt&psig=AOvVaw24eEPvDjgZc7yM_CxnYOQd&ust=1588023157108000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiG8LOFh-kCFQAAAAAdAAAAABAD" alt="background" class="back">
+      <img
+        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTvGNXRmC76GfZrgM7P_oY0nZqg00bsjC7E5zu4dZBReXiHD_kt&psig=AOvVaw24eEPvDjgZc7yM_CxnYOQd&ust=1588023157108000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiG8LOFh-kCFQAAAAAdAAAAABAD"
+        alt="background"
+        class="back"
+      />
     </div>
-    <div class="ggg">
-        <i class="fa fa-bars" id="gg" style='font-size:30px; color:rgb(255, 255, 255);'></i>
+    <input
+      type="text"
+      onclick="search()"
+      placeholder="Enter movie name"
+      class="movieQuery"
+    />
+
+    <div class="ff" onclick="search()">
+      <i
+        class="fa fa-search"
+        id="ved"
+        style="font-size: 30px; color: rgb(255, 255, 255);"
+      ></i>
     </div>
-<div class="ff">
-    <i class="fa fa-search" id="ved" onclick="search()" style='font-size:30px; color:rgb(255, 255, 255);'></i>
-   
-    <div class="foot">
-        
-<h1 class="veni">Venom</h1>
-<p class="pa">Action, Sci-Fi, Thriller</p>
-<p class="direc">Characters</p>
-<div id="nam">
-    <p class="dog">Director: </p>
-    <p class="name">  vedant vijay</p>
-    <p></p>
-</div>
-<div id="actors">
-    <p class="cas">Cast: </p>
-    <p class="cast">  vedant vijay</p>
-    <p></p>
+    <div class="content">
+      <div class="movie-name-genres">
+        <div class="movie-year">2019</div>
+        <div class="movie-name">Venom</div>
+        <div class="movie-genres">Action, Sci-Fi, Thriller</div>
+      </div>
+      <div class="characters">
+        <h3>Character</h3>
+        <div class="directors"><b>Directed by:</b>Ruben Fleischer</div>
+        <div class="cast">
+          <b>Cast:</b>
+          Tom Hardy, Michelle Williams, Riz Ahmed, Scott Haze
+        </div>
+      </div>
+      <div class="storyline">
+        <h3>Storyline</h3>
+        <h4 class="storylinetxt">
+          A failed reporter is bonded to an alien entity, one of many symbiotes
+          who have invaded Earth. But the being takes a liking to Earth and
+          decides to protect it.
+        </h4>
+      </div>
     </div>
-<h3  class="story">Storyline</h3>
-<h3 class="despo">A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.</h3>
-    </div>
-</div>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-body{
-    background: rgb(0, 0, 0);
-}
-.cas{
-    color: antiquewhite;
-font-size: 16px;
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+      body {
+        background: rgb(0, 0, 0);
+      }
+      .content {
+        background: linear-gradient(transparent, black 40%);
+        height: fit-content;
+        width: 100%;
+        position: absolute;
+        margin-top: auto;
+        top: 20pc;
+        padding: 40px;
+        color: rgb(255, 255, 255);
+        overflow-x: hidden;
+      }
+      .movie-name-genres {
+        width: 100%;
+        overflow-x: hidden;
+        height: fit-content;
+        position: relative;
+      }
+      .movie-name {
+        font-size: 50px;
+        overflow-x: hidden;
+        color: antiquewhite;
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      .rating {
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        margin: auto;
+        padding: 10px;
+        z-index: +10;
+        background: rgba(255, 181, 45, 0.685);
+        border-bottom: 2px solid rgb(255, 181, 45);
+        border-left: 2px solid rgb(255, 181, 45);
+        border-top: 2px solid rgb(255, 181, 45);
+        top: 0;
+        right: 0;
+        bottom: 20pc;
+      }
+      .movie-genres,
+      .movie-year {
+        overflow-x: hidden;
+        color: rgb(255, 182, 45);
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      .cast {
+        color: antiquewhite;
+        font-size: 20px;
+        overflow-x: hidden;
+      }
+      .cast {
+        font-size: 20px;
+        overflow-x: hidden;
+        color: rgb(187, 184, 184);
+      }
+      b {
+        color: antiquewhite;
+        font-size: 20px;
+        overflow-x: hidden;
+      }
+      .storyline {
+      }
+      .directors {
+        font-size: 20px;
+        overflow-x: hidden;
+        color: rgb(187, 184, 184);
+      }
+      #ved {
+        position: absolute;
+        margin: auto;
+        top: 30px;
+        right: 30px;
+      }
+      #gg {
+        position: absolute;
+        margin: auto;
+        left: 30px;
+        top: 30px;
+      }
 
-}
-#actors{
-    font-size: 15px;
-    display: inline-flex;
-    position: relative;
-    left: 20px;
-    top: 240px;
-    color: rgb(187, 184, 184);
-}
-.dog{
-color: antiquewhite;
-font-size: 16px;
-padding-right: 9px;
-}
-
-#nam{
-    font-size: 15px;
-    display: inline-flex;
-    position: relative;
-    left: 20px;
-    top: 270px;
-    color: rgb(187, 184, 184);
-}
-#ved{
-  position: relative;
-  top: -15px;
-  left: 320px;
-}
-#gg{
-    position: relative;
-left: 30px;
-top: 20px;
-}
-.back{
-   position: fixed;
-   
-   width: 100%;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-
-}
-.foot{
-    position: absolute;
-
-            width: 100%;
+      .movieQuery {
+        position: absolute;
+        height: 25px;
+        width: 150px;
+        margin: 18px;
+        background: transparent;
+        border: 4px solid white;
+        border-radius: 50px;
+        padding: 20px;
+        outline: none;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+      }
+      .d {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
         overflow: hidden;
-            margin: auto;
-            background: linear-gradient(transparent,black 67%);
-            bottom: -35px;
-            left: 0;
-            right: 0;
-}
-.veni{
-    color: antiquewhite;
-    font-family: 'Noto Sans JP', sans-serif;
-    position: relative;
-    top: 300px;
-    font-size: 50px;
-    margin: auto;
-    left: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .back {
+        position: absolute;
+        height: 100%;
+        margin: auto;
+      }
+      .foot {
+        position: absolute;
 
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
 
-}
-.pa{
-    color:  rgb(255, 182, 45);
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 15px;
-    position: relative;
-    top: 280px;
-    left: 30pt;
+        bottom: -35px;
+        left: 0;
+        right: 0;
+      }
+      .veni {
+        color: antiquewhite;
+        font-family: "Noto Sans JP", sans-serif;
+        position: absolute;
+        top: 300px;
+        font-size: 50px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        max-width: 90%;
+      }
+      .pa {
+        color: rgb(255, 182, 45);
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 15px;
+        position: relative;
+        top: 280px;
+        left: 30pt;
+      }
+      .characters h3 {
+        color: aliceblue;
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 30px;
+      }
+      .storyline h3 {
+        color: aliceblue;
+        font-size: 30px;
+        font-family: "Noto Sans JP", sans-serif;
+      }
 
-}
-.direc{
-    color: aliceblue;
-    font-family: 'Noto Sans JP', sans-serif;
-    position: relative;
-top: 300px;
-font-size: 20px;
-
-left: 20px;
-}
-.story{
-    color: aliceblue;
-    font-family: 'Noto Sans JP', sans-serif;
-    position: relative;
-top: 240px;
-left: 20px;
-}
-
-.despo{
-    color: rgb(211, 208, 208);
-    font-family: 'Montserrat', sans-serif; 
-    position: relative;
-    font-size: 20px;
-    margin: auto;
-    top: 230px;
-    left: 15px;
-
-
-}
-
-
+      .storyline h4 {
+        color: rgb(211, 208, 208);
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+      }
     </style>
     <script>
-        
-        document.querySelector(".back").style.height =
-          window.innerHeight / 16.00020157734 -9 + "pc";
-        
-          document.querySelector(".foot").style.height =
-          window.innerHeight / 16.00020157734 +7 + "pc";
-          
-  window.onload = search();
-function search(){
-    
-    var x = prompt("ENTER MOVIE NAME");
-    var api = "https://www.omdbapi.com/?apikey=47d808d1&t={"+x+"}&plot=full";
-   
-    $.getJSON(api, response);
-    
-    
-}
-function response(data){
-    console.log(data)
-    document.querySelector('.veni').innerHTML = data.Title;
-    document.querySelector('.pa').innerHTML = data.Year
-    document.querySelector('.back').src = data.Poster;
-    document.querySelector('.pa').innerHTML = data.Genre;
-    document.querySelector('.cast').innerHTML = data.Actors;
-    document.querySelector('.name').innerHTML = data.Director;
-    document.querySelector('.despo').innerHTML = data.Plot;
-    
-    
-}
+      window.onload = function () {
+        document.querySelector(".movieQuery").value = "Stranger Things";
+        search();
+      };
+      function search() {
+        var x = document.querySelector(".movieQuery").value.trim();
+        console.log(x);
+        var api =
+          "https://www.omdbapi.com/?apikey=47d808d1&t={" + x + "}&plot=full";
+        document.querySelector(".d").style.height = window.innerHeight + "px";
+        $.getJSON(api, response);
+        document.querySelector(".movieQuery").value = "";
+      }
+      setInterval(() => {
+        document.querySelector(".movieQuery").style.width =
+          window.innerWidth - 100 + "px";
+        document.querySelector(".d").style.height =
+          window.innerHeight - window.scrollY / 7 + "px";
+      }, 10);
+      function response(data) {
+        document.querySelector(".movie-year").innerHTML =
+          (data.Year.includes("–")
+            ? "Since " + data.Year.replace("–", "")
+            : data.Year) +
+          " • " +
+          data.Runtime +
+          " • " +
+          data.Type;
+        document.querySelector(".rating").innerHTML = "Rated: " + data.Rated;
+        document.querySelector(".movie-name").innerHTML = data.Title;
+        document.querySelector(".back").src = data.Poster;
+        document.querySelector(".movie-genres").innerHTML = data.Genre;
+        document.querySelector(".cast").innerHTML =
+          "<b>Cast:</b> " + data.Actors;
+        document.querySelector(".directors").innerHTML =
+          "<b>Directed By:</b> " + data.Director;
+        document.querySelector(".storylinetxt").innerHTML = data.Plot;
+      }
     </script>
-    
-</body>
+  </body>
 </html>
